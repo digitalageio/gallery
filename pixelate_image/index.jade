@@ -1,0 +1,13 @@
+extends ../../views/index
+
+block css
+	link(href="style.css",rel="stylesheet")
+
+block content
+	#container
+		canvas(id="canvas",width="180",height="275")
+		input(id="intensity",type="range",max="25",value="1")
+		input(id="animate",type="button",value="Start")
+
+block js
+	script(src="app.js")

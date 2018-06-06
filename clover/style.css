@@ -1,0 +1,54 @@
+.clover {
+	position: relative;
+	margin: 100px;
+}
+
+.clover .leaf {
+	-webkit-transform-origin: 50px 50px;
+	-ms-transform-origin: 50px 50px;
+	transform-origin: 50px 50px;
+}
+
+.clover .leaf:before,
+.clover .leaf:after {
+	position: absolute;
+	content: " ";
+	left: 50px;
+	top: 0;
+	width: 50px;
+	height: 80px;
+	background-color: green;
+	border-radius: 30px 20px 0 0;
+
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+
+	-webkit-transform-origin: 0 100%;
+	-ms-transform-origin: 0 100%;
+	transform-origin: 0 100%;
+}
+	
+.clover .leaf:after {
+	left: 0;
+
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+
+	-webkit-transform-origin: 100% 100%;
+	-ms-transform-origin: 100% 100%;
+	transform-origin: 100% 100%;
+}
+
+.clover .leaf.right {
+	-webkit-transform: rotate(120deg) translate(15px, -30px);
+	-ms-transform: rotate(120deg) translate(15px, -30px);
+	transform: rotate(120deg) translate(15px, -30px);
+}
+.clover .leaf.left {
+	-webkit-transform: rotate(-120deg) translate(-15px, -30px);
+	-ms-transform: rotate(-120deg) translate(-15px, -30px);
+	transform: rotate(-120deg) translate(-15px, -30px);
+}
+

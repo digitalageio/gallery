@@ -1,0 +1,12 @@
+extends ../../views/index
+
+block css
+	link(href="style.css",rel="stylesheet")
+	include header.html
+
+block content
+	include body.html
+
+block js
+	script(src="/nm/angular/angular.min.js")
+	script(src="app.js")

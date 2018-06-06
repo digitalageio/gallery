@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+	<div id="countdown"></div>
+</body>
+	<script>
+		var then = new Date(2015,10,7,0,0,0,0);
+		setInterval(function() {
+			  var now = new Date();
+			  var diff = new Date(Math.abs(then.getTime() - now.getTime()));
+			  var time = diff.getTime();
+			  var d = Math.floor(time/(24 * 60 * 60 * 1000));
+			  var h = diff.getUTCHours() - 1;
+			  var m = diff.getMinutes();
+			  var s = diff.getSeconds();
+			  jQuery("#countdown").html(d + " days<br />" + h + " hours<br />" + m + " minutes<br />" + s + " seconds");
+		}, 1000);
+	</script>
+</html>

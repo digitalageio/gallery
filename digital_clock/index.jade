@@ -1,0 +1,11 @@
+extends ../../views/index
+
+block css
+  link(href="style.css",rel="stylesheet")
+
+block content
+  include digital-clock-face.html
+  include circular-clock-face.html
+
+block js
+  script(src="clock.js")

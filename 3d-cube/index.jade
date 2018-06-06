@@ -1,0 +1,20 @@
+extends ../../views/index
+
+block css
+	link(id="stylesheet" href="style.css",rel="stylesheet")
+
+block content
+		.wrap
+			#cube(class="cube")
+				.front front
+				.back back
+				.top top
+				.bottom bottom
+				.left left
+				.right right
+
+		| <span>CSS-prefix:</span><div id ="css-prefix"></div>
+		| <span>=~keyframe:</span><div id="percent-indicator"></div>
+
+block js
+	script(src="script.js")

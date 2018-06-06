@@ -1,0 +1,123 @@
+body {
+  background: #2f4f4f;
+  font-family: 'Varela', sans-serif;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-perspective: 600px;
+  perspective: 600px;
+}
+.container {
+    position: relative;
+    margin: 100px 250px;
+    padding: 50px;
+    text-align: center;
+    background-color: black;
+}
+#clock-2 {
+  padding: 120px 0;
+}
+.digit {
+  display: inline-block;
+  margin: 0 11px 0 16px;
+}
+.cell {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+.active {
+  background-color: white;
+  box-shadow: 0 0 15px white;
+}
+.cell-horizontal {
+  margin: 0 16px 0 16px 0;
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 16px;
+  vertical-align: middle;
+}
+.cell-horizontal:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -16px;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 16px solid;
+}
+.cell-horizontal:after {
+  content: "";
+  position: absolute;
+  left: -16px;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 16px solid;
+}
+.cell-vertical {
+  margin: 16px 0 16px 0;
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 24px;
+}
+.cell-left {
+  float: left;
+}
+.cell-right {
+  float: right;
+}
+.cell-vertical:before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 16px solid;
+}
+.cell-vertical:after {
+  content: "";
+  position: absolute;
+  bottom: 24px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 16px solid;
+}
+#s2-2 {
+  margin-left: 32px;
+}
+#s2-2 .cell {
+  margin: 16px;
+}
+.circle {
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: black;
+}
+.circle-1 {
+  width: 280px;
+  height: 280px;
+}
+.circle-2 {
+  width: 260px;
+  height: 260px;
+}
+.circle-3 {
+  width: 240px;
+  height: 240px;
+}
+.circle-4 {
+  width: 220px;
+  height: 220px;
+}
+.circle-5 {
+  width: 200px;
+  height: 200px;
+}
+.circle-6 {
+  width: 180px;
+  height: 180px;
+}

@@ -1,0 +1,55 @@
+<div class="container" ng-app="sortApp" ng-controller="mainController">
+
+	<div class="alert alert-info style="background-color: white;">
+		<p>Sort Type: {{ sortType }}</p>
+		<p>Sort Reverse: {{ sortReverse }}</p>
+		<p>Search Query: {{ searchLanguage }}</p>
+	</div>
+
+	<form>
+		<div class-"form-group">
+			<div class="input-group">
+				<div class="input-group-addon"><i class="fa fa-search"></i></div>
+				<input type="text" class="form-control" placeholder="Search" ng-model="searchLanguage">
+			</div>
+		</div>
+	</form>
+
+	<table class="table table-bordered table-striped" style="background-color: white;">
+
+		<thead>
+			<tr>
+				<td>
+					<a href="#" ng-click="sortType = 'name'; sortReverse = ! sortReverse">
+						Name
+						<span ng-show="sortType == 'name' && !sortReverse" class="fa fa-caret-down"></span>
+						<span ng-show="sortType == 'name' && sortReverse" class="fa fa-caret-up"></span>
+					</a>
+				</td>
+				<td>
+					<a href="#" ng-click="sortType = 'author'; sortReverse = ! sortReverse">
+						Author
+						<span ng-show="sortType == 'author' && !sortReverse" class="fa fa-caret-down"></span>
+						<span ng-show="sortType == 'author' && sortReverse" class="fa fa-caret-up"></span>
+					</a>
+				</td>
+				<td>
+					<a href="#" ng-click="sortType = 'year'; sortReverse = ! sortReverse">
+						Year
+						<span ng-show="sortType == 'year' && !sortReverse" class="fa fa-caret-down"></span>
+						<span ng-show="sortType == 'year' && sortReverse" class="fa fa-caret-up"></span>
+					</a>
+				</td>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr ng-repeat="roll in languages | orderBy:sortType:sortReverse | filter:searchLanguage">
+				<td>{{ roll.name }}</td>
+				<td>{{ roll.author }}</td>
+				<td>{{ roll.year }}</td>
+			</tr>
+		</tbody>
+
+	</table>
+</div>
