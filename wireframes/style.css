@@ -1,0 +1,15 @@
+body {
+    background: black;
+    color: white;
+    margin: 0;
+}
+
+fieldset {
+    border: none;
+}
+
+canvas {
+    display: block;
+    image-rendering: pixelated;
+    width: 100vw;
+}
