@@ -1,0 +1,15 @@
+body {
+    align-items: center;
+    background: #202020;
+}
+canvas {
+    border: solid 1px #fff;
+    border-left: none;
+    border-right: none;
+    image-rendering: pixelated;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+}
