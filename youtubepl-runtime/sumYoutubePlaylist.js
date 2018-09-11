@@ -9,4 +9,4 @@ for(i in timestamps){
     }
 }
 
-parseFloat((total/60).toFixed(2));
+parseFloat((total/3600).toFixed(2));
