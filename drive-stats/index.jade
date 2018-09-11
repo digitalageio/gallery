@@ -1,0 +1,12 @@
+extends ../../views/index
+
+block css
+    link(href='style.css',rel='stylesheet')
+
+block content
+    div(id="app-container" class="app-container")
+
+block js
+    script(src='/react/react.js')
+    script(src='/react-dom/react-dom.js')
+    script(type='module' src='drive-stats.js')

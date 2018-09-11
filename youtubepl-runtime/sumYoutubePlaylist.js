@@ -1,9 +1,12 @@
-var timestamps = document.getElementsByTagName('div'), i, total = 0;
+var timestamps = document.getElementsByClassName('timestamp'), i, total = 0;
 
 for(i in timestamps){
-	if(timestamps[i].className === 'timestamp'){
-		total = total + parseInt(timestamps[i].children[0].innerHTML.split(":")[0]);
-	}
+    if(timestamps[i].firstChild){
+        var time = timestamps[i].children[0].innerHTML.split(":").reverse();
+        time.forEach(function(e, i){
+            total += parseInt(e) * Math.pow(60, i);
+        });
+    }
 }
 
-console.log((total/60).toFixed(2));
+parseFloat((total/60).toFixed(2));
