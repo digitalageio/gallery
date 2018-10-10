@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+<script src="scripts/ColorSelectorCtrl.js"></script>
+<script src="scripts/PieceEditorCtrl.js"></script>
+<script src="scripts/PieceSelectorCtrl.js"></script>
+</head>
+<body ng-controller="PieceEditorCtrl">
+	<div id="piece_selector" ng-controller="PieceSelectorCtrl" ng-style={width:(selector.width),height:(selector.height),borderStyle:(selector.borderStyle),borderColor:(selector.borderColor),borderWidth:(selector.borderWidth),position:'relative'}>
+	<select ng-model="setSelect" ng-options="set as set.label for set in sets" ng-change="setChange()"></select>
+		<div ng-repeat="image in images">
+			<img ng-src={{image.src}} ng-click="pieceSelect(image.src)">
+		</div>
+	</div>
+	<div id="piece_grid" ng-style={position:'absolute',top:'0px',left:'25%'}>
+		<div ng-repeat="square in squares" ng-style={backgroundColor:(square.rgba),top:(square.y),left:(square.x),position:'absolute'}>
+			&nbsp;
+		</div>
+	</div>
+	<div id="color_selector" ng-controller="ColorSelectorCtrl" ng-style={width:(selector.width),height:(selector.height),borderStyle:(selector.borderStyle),borderColor:(selector.borderColor),borderWidth:(selector.borderWidth),top:'5px',right:'5px',position:'absolute'}>
+		<div id="selected_color" ng-style="{backgroundColor:(selected.hex),height:(selected.height),width:(selected.width),top:(selected.top),left:(selected.left),position:'absolute'}">
+		&nbsp;
+		</div>
+		<div id="recent_colors" ng-style={top:(recentColorBox.top),left:(recentColorBox.left),position:'absolute'}>
+			<span ng-repeat="color in recentColors" ng-style="{float:'left',backgroundColor:(color),height:(recentColorBox.height),width:(recentColorBox.width)}" ng-click="selectColor(color)">
+			&nbsp;
+			</span>
+		</div>
+		<div id="color_box" ng-style={top:(colorBox.top),left:(colorBox.left),position:'absolute'}>
+			<div ng-repeat="color in colors" ng-style="{backgroundColor:(color.hex),height:(color.height),width:(color.width),top:(color.top),left:(color.left),position:'absolute'}" ng-click="selectColor(color.hex); recentColor(color.hex)">
+			&nbsp;
+			</div>
+		</div>
+	</div>
+</body>
+</html>

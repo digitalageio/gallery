@@ -1,0 +1,1 @@
+Application built for Real Estate Analyzed inc, used to access a sizable mySQL database of real estate and census demographics data

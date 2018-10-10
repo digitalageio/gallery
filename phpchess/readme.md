@@ -1,0 +1,1 @@
+Early attempts at experimenting with PHP to create a chess playing app.

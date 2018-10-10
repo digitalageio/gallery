@@ -1,0 +1,4 @@
+LOAD DATA LOCAL INFILE '/home/user/Documents/blount_county/blounaf_072911.bin'
+INTO TABLE general_parcel_data
+FIELDS TERMINATED BY '' ENCLOSED BY ''
+LINES TERMINATED BY '\n';
